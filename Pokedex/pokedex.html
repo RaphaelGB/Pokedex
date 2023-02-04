@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links-->
+    <link rel="icon" href="./favicons/Raposinha.png">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!--Main JS-->
+    <script defer src="JS/scripts.js"></script>
+    <!-- o "defer" é um atributo que serve para o Js não carregar antes do HTML-->
+    <title>Pokedéx</title>
+
+</head>
+<body>
+    
+    <main>
+        <img src="#" alt="" class="pokemon_image">
+        
+        <h1 class="pokemon_data">
+            <span class="pokemon_number"></span> 
+            -
+            <span class="pokemon_name"></span>
+        </h1>
+
+        <form class="form">
+            <input 
+            type="search"
+            class="input_search"
+            placeholder="Name or Number"
+            required     
+            />
+            <!-- O type="search", no celular, ao digitar ao invés de aparecer a tecla enter, aparece um ícone de lupa -->
+            <!-- O required significa que para enviar o formulário é obrigatório preencher o espaço do input -->
+        </form>
+
+        <div class="buttons">
+            <button class="button btn-prev"> Prev &lt;</button>
+            <button class="button btn-next"> Next &gt;</button>
+        </div>
+        <!-- Há certas teclas, formas, que estão reservadas pelo HTML (como "<" ou ">")
+        essas são HTML entidades, há um site que permite que coloquemos essas entidades de outra forma  
+    Basta pesquisar HTML entities ou seguir o link: https://www.w3schools.com/html/html_entities.asp
+    -->
+
+        <img src="Images/pokedex.png" alt="pokedex" class="pokedex">
+        
+    </main>
+
+</body>
+</html>

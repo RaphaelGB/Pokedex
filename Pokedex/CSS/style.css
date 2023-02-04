@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+body{
+    text-align: center;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    min-height: 100vh;
+}
+main{
+    margin-top: 2%;
+    display: inline-block;
+    padding:15px;
+    position: relative;
+}
+/*Para deixar mais responsivo, colocamos um width de 100%
+Já que nosso main não tem tamanho definido, o width 100% vai deixar a
+imagem do tamanho normal, mas quando diminuir para tela mobile, fica 
+responsivo.
+O max-width vai deixar que todas as alterações ao redor da pokedex
+não permitam que a pokedex altere seu tamanho padrão
+*/
+.pokedex{
+    width: 100%;
+    max-width: 425px;
+}
+/*
+A porcentagem dos left e bottom se refere a quanto a imagem vai ser
+posicionada em relação ao main
+A porcentagem do transform vai se relacionar com o tamanho da imagem
+*/
+.pokemon_image{
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-63%, 20%);
+    height: 18%;
+}
+
+.pokemon_data{
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    top: 54.5%;
+    right: 27%;
+    font-size: clamp(8px, 5vm, 25px);
+}
+/*Ele usa a propriedade "clamp" no texto para permitir que o texto 
+fique responsivo, tendo um tamanho desejável (que normalmente usa-se
+valores não fixos para deixar responsivo), um min para que ele não dimi-
+nua mais que aquele valor e um máximo para não ficar extremamente grande 
+font-size: clamp (min, desejável, max);
+*/
+.pokemon_name{
+    color: #3a444d;
+    text-transform: capitalize;
+    /*Deixa só a primeira letra maiúscula*/
+}
+
+/*Durante todo o vídeo, a cada novo elemento colocado, ele vai adaptando
+e deixando responsivo, antes de continuar*/
+
+.form{
+    position: absolute;
+    width: 65%;
+    top: 65%;
+    left: 13.5%;
+}
+
+.input_search{
+    width: 100%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid #333;
+    border: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px, 5vm, 1rem);
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+}
+/*A propriedade box shadow vai criar sombras nos elementos que selecionarmos
+seguindo os seguintes aspectos de mudança:
+box-shadow: eixo x eixo y tamanho(desfoque) cor, valor da outra sombra
+(sem vírgula)
+*/
+
+/*BUTTONS*/
+.buttons{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-57%, 0);
+    display: flex;
+    gap: 20px;
+}
+
+.button{
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vm, 1rem);
+    font: 600;
+    color: white;
+    background: #444;
+    box-shadow: -2px 3px 0 #222, -5px 7px 0 #000;
+}
+
+.button:active{
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
+/*
+A propriedade ":active" depois de button, define que será feita alguma coisa 
+quando o botão for pressionado, quando o mouse estiver sendo pressionado sobre ele
+*/
